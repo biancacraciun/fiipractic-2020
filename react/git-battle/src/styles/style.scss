@@ -1,0 +1,29 @@
+body {
+    background-color: powderblue;
+}
+
+.background {  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    p {
+        text-align: center;
+    }
+
+    .hai {
+        background-color: royalblue;
+        padding: 10px;
+        border: 1px solid royalblue;
+        border-radius: 5px;
+        width: 150px;
+        height: auto;
+        cursor: pointer;
+    }
+    
+    .buttons {
+        display: flex;
+        flex-direction: column;
+    }
+}
