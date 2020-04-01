@@ -9,7 +9,7 @@ class Main extends Component {
     render() {
         return (
             <div className="main">
-                We will pass content from props :D
+                "Hi"
             </div>
         )
     }

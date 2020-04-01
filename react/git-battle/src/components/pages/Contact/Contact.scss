@@ -1,0 +1,122 @@
+.contact { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 45%;
+    top: 0;
+    left: 0;
+    margin: auto;
+
+    h3 {
+        text-align: center;
+    }
+
+    input {
+        width: 30%;
+        border: 1px solid #5e971c;
+        outline: 1px solid #5e971c;
+
+        &::placeholder {
+            text-align: center;
+            font-size: 10px;
+        }
+    }
+
+    #subject {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    #fname {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    #lname {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    #email {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    #phone {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    #file {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    #file {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+
+        .btn {
+            border: 2px solid #5e971c;
+            background-color: #5e971c;
+            padding: 5px;
+            margin: 0px 5px;
+            width: 100%;
+
+            &:hover {
+                background-color: green;
+            }
+
+            &:hover + label {
+                opacity: 1;
+                -webkit-transition: all 500ms ease-in-out;
+                -moz-transition: all 500ms ease-in-out;
+                -ms-transition: all 500ms ease-in-out;
+                -o-transition: all 500ms ease-in-out;
+                transition: all 500ms ease-in-out;
+            }
+        }
+        
+        label {
+            opacity: 0;
+        }
+    }
+
+    #file input[type=file] {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+    }
+
+    #more {
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+
+        textarea {
+            border: 1px solid #5e971c;
+            outline: 1px solid #5e971c;
+        }
+    }
+
+    input[type=submit] {
+        top: 0;
+        left: 0;
+        margin: auto;
+        cursor: pointer;
+
+        background-color: #5e971c;
+        border: none;
+        padding: 5px;
+
+        &:hover {
+            background-color: green;
+        }
+    }
+
+    .error__message {
+        color: red;
+    }
+}

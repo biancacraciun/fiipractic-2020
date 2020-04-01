@@ -1,29 +1,24 @@
-body {
-    background-color: powderblue;
+@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
+
+* {
+    font-family: 'Gotu', sans-serif;
 }
 
-.background {  
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.layout {
+    position: relative;
+    min-height: 100vh;
 
-    p {
-        text-align: center;
+    .content {
+        padding-bottom: 2rem; 
+
+        .header {
+            position: relative;
+        }
     }
 
-    .hai {
-        background-color: royalblue;
-        padding: 10px;
-        border: 1px solid royalblue;
-        border-radius: 5px;
-        width: 150px;
-        height: auto;
-        cursor: pointer;
-    }
-    
-    .buttons {
-        display: flex;
-        flex-direction: column;
+    .footer {
+        position: sticky;
+        bottom: 0;
+        width: 100%;  
     }
 }

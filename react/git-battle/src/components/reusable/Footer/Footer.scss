@@ -1,0 +1,63 @@
+$marginTop: 10px;
+$fontSize: 12px;
+
+.footer {
+    width: 100%;
+    border: 1px solid #eee;
+    background-color: #eee;
+    
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    #location {
+        text-align: center;
+        margin-top: $marginTop;
+
+        p {
+            font-size: $fontSize;
+        }
+    }
+
+    #email {
+        text-align: center;
+        margin-top: $marginTop;
+
+        a { 
+            color: black;
+        }
+
+        p {
+            font-size: $fontSize;
+        }
+    }
+
+    #phone {
+        text-align: center;
+        margin-top: $marginTop;
+
+        p {
+            font-size: $fontSize;
+        }
+    }
+
+    .social__contact {
+        text-align: center; 
+        margin-top: $marginTop;
+
+        .social {
+            
+            .icon {
+                margin: 0px 5px;
+                cursor: pointer;
+            }
+        }
+
+        a { 
+            text-decoration: none;
+            color: black;
+            font-size: $fontSize;
+        }
+    }
+}

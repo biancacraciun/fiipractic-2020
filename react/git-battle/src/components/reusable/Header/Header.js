@@ -1,4 +1,11 @@
 import React, { Component } from 'react';
+import Menu from '../Menu/Menu';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+    faEnvelopeSquare,
+    faBell 
+} from '@fortawesome/free-solid-svg-icons';
+
 import './Header.scss';
 
 class Header extends Component {
@@ -9,12 +16,7 @@ class Header extends Component {
     render() {
         return (
             <div className="header">
-                <h1>Layout practice</h1> 
-
-                <div className="social">
-                    <a href="#">Contact us!</a>
-                    <a href="#">Subscribe</a>
-                </div>
+                <h1>Fii Practic <i>__React.js__</i></h1> 
             </div>
         )
     }

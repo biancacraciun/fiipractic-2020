@@ -1,0 +1,40 @@
+.modal {
+    border: 1px solid black;
+    background-color: white;
+
+    .header {
+        text-align: center;
+        border: 1px solid black;
+        background-color: #eee;
+    }
+
+    .main__content {
+        border: 1px solid black;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        padding: 10px;
+        background-color: #ccc;
+        width: auto;
+        height: 50vh;
+
+        input { 
+            width: 500px;
+            margin-left: 25%;
+            text-align: center;
+        }
+    }
+
+    .side__bar {
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        
+        button {
+            padding: 10px;
+            margin: 10px;
+        }
+    }
+}

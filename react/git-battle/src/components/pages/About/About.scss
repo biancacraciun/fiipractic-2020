@@ -1,0 +1,43 @@
+.about {
+
+    margin: 10px;
+
+    .ask {
+        
+        p:last-of-type {
+            margin-top: -10px;
+            opacity: 0.0;
+            -webkit-transition: all 500ms ease-in-out;
+            -moz-transition: all 500ms ease-in-out;
+            -ms-transition: all 500ms ease-in-out;
+            -o-transition: all 500ms ease-in-out;
+            transition: all 500ms ease-in-out;
+        }
+
+        p:first-of-type  {
+            &:hover + p:last-of-type {
+                opacity: 1;
+            }
+        }
+    }
+
+    input[type=text] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 30%;
+        outline: none;
+    }
+
+    button {
+        padding: 10px;
+        border: none;
+        background-color: #5e971c;
+        margin: 0px 10px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: green;
+        }
+    }
+}
