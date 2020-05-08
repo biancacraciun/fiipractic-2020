@@ -1,0 +1,54 @@
+$specialText: #BE3144;
+$radius: 5px;
+
+.user {
+    max-width: 30vmax;
+    width: 40vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid $specialText;
+    border-radius: $radius;
+    box-shadow: 32px 32px 17px -12px rgba(42,32,37,0.87);
+    margin: 3rem;
+
+    h2 {
+        text-align: center;
+        padding: 1rem;
+    }
+
+    img {
+        max-width: 30vmax;
+        width: 20vmax;
+        border-radius: $radius;
+        margin: 1rem;
+
+        &:hover {
+            opacity: 0.5;
+            transition: opacity 0.5s;
+        }
+    }
+
+    .list {
+        padding: 1rem;
+
+        li {
+            list-style-type: none;
+            color: white;
+            margin: 5px;
+
+            a {
+                text-decoration: none;
+                color: $specialText;
+            }
+
+            .icon {
+                margin-right: 5px;
+            }
+
+            span {
+                color: white;
+            }
+        }
+    }
+}

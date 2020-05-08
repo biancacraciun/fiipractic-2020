@@ -1,0 +1,137 @@
+$specialText: #BE3144;
+$medium: 1.2rem;
+$radius: 5px;
+$basicBorder: 1px solid $specialText;
+
+.start {
+    margin-top: 10vmax;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+
+    .error_message {
+        text-align: center;
+        font-size: $medium;
+        color: $specialText;
+        position: relative;
+        -webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }
+    
+    @-webkit-keyframes tracking-in-contract-bck {
+        0% {
+          letter-spacing: 1em;
+          -webkit-transform: translateZ(400px);
+                  transform: translateZ(400px);
+          opacity: 0;
+        }
+        40% {
+          opacity: 0.6;
+        }
+        100% {
+          -webkit-transform: translateZ(0);
+                  transform: translateZ(0);
+          opacity: 1;
+        }
+    }
+    @keyframes tracking-in-contract-bck {
+        0% {
+          letter-spacing: 1em;
+          -webkit-transform: translateZ(400px);
+                  transform: translateZ(400px);
+          opacity: 0;
+        }
+        40% {
+          opacity: 0.6;
+        }
+        100% {
+          -webkit-transform: translateZ(0);
+                  transform: translateZ(0);
+          opacity: 1;
+        }
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+
+        .inputs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+
+            input {
+                margin: 3rem;
+                text-align: center;
+                font-size: $medium;
+                background-color: rgba(0, 0, 0, 0);
+                border: none;
+                border-radius: $radius;
+                width: 10vmax;
+                transition: width 0.4s ease;
+                border-bottom: 2px solid #2a2025;
+                color: white;
+                transition: all 1s;
+
+                &:focus {
+                    max-width: 100%;
+                    width: 20vmax;
+                    outline: none;
+                    border: 2px solid $specialText;
+                    transition: width 1s ease-in-out;
+                }
+
+                &::placeholder {
+                    text-align: center;
+                }
+            }
+        }
+
+        .button {
+            button {
+                background: rgba(0, 0, 0, 0);
+                border: 2px solid $specialText;
+                border-radius: $radius;
+                padding: 10px;
+                font-size: $medium;
+                color: white;
+                width: 15vmax;
+                cursor: pointer;
+
+                &:hover {
+                    border: 2px solid #F30;
+                    transition: border 0.5s;
+                    color: $specialText;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+.weapons {
+    max-width: 30vmax;
+    line-height: 2;
+    border-top: $basicBorder;
+    border-bottom: $basicBorder;
+    border-radius: 15%;
+    padding: 1rem;
+    margin: 0.5rem;
+
+    label {
+        font-size: $medium;
+        font-weight: bold;
+        color: $specialText;
+    }
+
+    span {
+        font-weight: bold;
+        color: $specialText;
+    }
+}

@@ -1,0 +1,107 @@
+$medium: 1.5rem;
+$small: 1rem;
+$specialText: #BE3144;
+$medium_width: 10vmax;
+$border: 2px solid $specialText;
+$radius: 5px;
+
+.popular_users {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  margin-top: 10vmax;
+
+  label {
+    font-size: $medium;
+    text-align: center;
+  }
+
+  .selected_language {
+    display: flex;
+    margin: $small;
+
+    .options {
+      outline: none;
+      border: none;
+      border-bottom: $border;
+      border-radius: $radius;
+      background-color: rgba(0, 0, 0, 0);
+      color: $specialText;
+      font-size: $small;
+      padding: 0.5rem;
+      cursor: pointer;
+      width: $medium_width;
+      margin: 0px $small;
+
+      &:hover {
+          border-bottom: 2px solid #F00D1E;
+          transition: border-bottom 0.5s;
+      }
+    }
+
+    button {
+      width: $medium_width;
+      background-color: #2a2025;
+      border: none;
+      border-bottom: $border;
+      border-radius: $radius;
+      color: $specialText;
+      font-size: $small;
+      cursor: pointer;
+      outline: none;
+      text-align: center;
+
+      &:hover {
+          border-bottom: 2px solid #F00D1E;
+          transition: border-bottom 0.5s;
+      }
+    }
+  }
+
+  .error {
+    color: $specialText;
+    -webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+  }
+
+  @-webkit-keyframes tracking-in-contract-bck {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(400px);
+              transform: translateZ(400px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-contract-bck {
+    0% {
+      letter-spacing: 1em;
+      -webkit-transform: translateZ(400px);
+              transform: translateZ(400px);
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+
+  .users {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

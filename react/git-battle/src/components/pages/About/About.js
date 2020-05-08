@@ -1,82 +1,18 @@
-import React, { Component } from 'react'; 
+import React from 'react';
+import '../../../styling/about.scss';
 
-import './About.scss';
+import Logo from '../../UI/logo/logo';
 
-class About extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            value: "",
-            valueArray: []
-        }
-    };  
-
-    addToList = (event) => {
-        const newValue = event.target.value;
-
-        this.setState({
-            value: newValue
-        })
-    };
-
-    showList = () => {
-        const item = this.state.valueArray;
-
-        item.push(this.state.value)
-        this.setState({
-            valueArray: item
-        })
-    };
-
-    focusInput = (event) => {
-        event.target.value = ""
-    };
-
-    eraseValue = (index) => {
-        let removed = [...this.state.valueArray]
-        removed.splice(index, 1);
-
-        this.setState({
-            valueArray: removed
-        })
-    };
-
-
-    render() {
-        return (
-            <div className="about">
-
-                <div className="ask">
-                    <p>What can you do to improve your performance?</p>
-                    <p>Create your own list</p>
-                </div>
-
-                <input type="text" 
-                    placeholder="Type here.."
-                    onFocus={this.focusInput} 
-                    onChange={this.addToList} 
-                    value={this.state.value}
-                />
-
-                <button onClick={this.showList}>
-                    Add to list
-                </button>
-
-                <ul>
-                    {this.state.valueArray.map( (value, index) => {
-                        return (
-                            <li onClick={this.eraseValue} key={index}>
-                                {value}
-                            </li>
-                        )
-                    })}
-                </ul>
+const about = () => {
+    return (
+        <div className="about">
+            <div className="intro">
+                Enjoy the github-ers faith. <br />
+                Click <span>Battle</span> for more!
             </div>
-        )
-    }
+            <Logo  className="logo"/> 
+        </div>
+    );
+};
 
-    
-}
-
-export default About;
+export default about;

@@ -1,0 +1,21 @@
+$specialText: #BE3144;
+
+.modal {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: center;
+    border-radius: 5px;
+    background-color: #2a2025;
+    box-shadow: 10px 10px 30px $specialText;
+    position: relative;
+    margin: 20vmin;
+    z-index: 1;
+    animation: fadein 0.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}

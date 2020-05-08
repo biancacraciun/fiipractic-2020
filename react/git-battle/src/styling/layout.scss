@@ -1,0 +1,105 @@
+// variables
+$titles: 3em;
+$medium: 1.5rem;
+$small: 1rem;
+$space: 2rem;
+
+.layout {
+  .navigation {
+    font-size: $medium;
+    background-color: #BE3144;
+    padding: $space;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+
+    .navigation_link {
+      text-decoration: none;
+      margin: $small;
+      color: white;
+      border-bottom: 3px solid transparent;
+
+      &:hover {
+        border-bottom: 3px solid white;
+        transition: border-bottom .5s ease-in-out;
+      }
+    }
+
+    .navigation_link--active {
+      border-bottom: 3px solid white;
+      transition: border-bottom 1s ease-in-out;
+    }
+
+    #battle_navigation_link {
+      -webkit-animation: text-shadow-drop-left 4s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite both;
+	        animation: text-shadow-drop-left 4s cubic-bezier(0.680, -0.550, 0.265, 1.550) infinite both;
+    }
+
+    @-webkit-keyframes text-shadow-drop-left {
+      0% {
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+      }
+      100% {
+        text-shadow: -6px 0 18px rgba(0, 0, 0, 1.5);
+      }
+    }
+    @keyframes text-shadow-drop-left {
+      0% {
+        text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+      }
+      100% {
+        text-shadow: -6px 0 18px rgba(0, 0, 0, 1.5);
+      }
+    }
+    
+    .header {
+      display: flex;
+      align-self: center;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      font-size: 1rem;
+      text-align: center;
+      font-size: $titles;
+      position: fixed;
+      -webkit-animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+          animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }
+    
+    @-webkit-keyframes tracking-in-contract-bck {
+      0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(400px);
+                transform: translateZ(400px);
+        opacity: 0;
+      }
+      40% {
+        opacity: 0.6;
+      }
+      100% {
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes tracking-in-contract-bck {
+      0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(400px);
+                transform: translateZ(400px);
+        opacity: 0;
+      }
+      40% {
+        opacity: 0.6;
+      }
+      100% {
+        -webkit-transform: translateZ(0);
+                transform: translateZ(0);
+        opacity: 1;
+      }
+    }
+  }
+}

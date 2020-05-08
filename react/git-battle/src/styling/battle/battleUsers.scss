@@ -1,0 +1,86 @@
+$medium: 2rem;
+$small: 1.5rem;
+$space: 5px;
+$specialText: #BE3144;
+$border: 1px solid $specialText;
+
+.show_user {
+  max-width: 30vmax;
+  width: 25vmax;
+  margin: 10vmin;
+  box-sizing: border-box;
+  border-bottom: $border;
+  border-top: $border;
+  border-radius: 10%;
+
+  header {
+    h2 {
+      font-size: $medium;
+    }
+  }
+
+  .users{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .avatar {
+      a {
+        img { 
+          max-width: 50vmin;
+          border-radius: 5px;
+          text-align: center;
+        }
+
+        &:hover {
+          opacity: 0.5;
+          transition: opacity 0.5s;
+        }
+      }
+    }
+  
+    .name {
+      text-align: center;
+      font-size: $small;
+
+      a { 
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+    .profile_info {
+
+      ul {
+        li {
+          list-style-type: none;
+          font-size: 1.2rem;
+
+          a {
+            text-decoration: none;
+            color: $specialText;
+          }
+        }
+      }
+      .span {
+        font-weight: bold;
+        margin: 0 $space;
+      }
+
+      .click_here {
+        color: $specialText;
+      }
+
+      #click_blog {
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+
+      .icon {
+        margin-right: $space;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+
+$medium: 1.5rem;
+$small: 0.5rem;
+$font: 'Raleway Dots', cursive;
+$specialText: #BE3144;
+
+.about {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    align-content: center;
+    margin-top: 10vmax;
+
+    .intro {
+        font-size: $medium;
+        text-align: center;
+        font-family: $font;
+    
+        span {
+            color: #BE3144;
+        }
+    }
+    
+    .logo {
+        margin: 10vmax;
+    }
+    .criteria {
+        margin: $medium;
+        
+        p {
+            font-size: $medium;
+            letter-spacing: 2px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        li {
+            list-style-type: "→";
+            padding: $small;
+            letter-spacing: 2px;
+        }
+    }
+}
