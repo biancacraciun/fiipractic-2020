@@ -1,0 +1,23 @@
+$specialText: #BE3144;
+$border: 2px solid $specialText;
+$radius: 5px;
+
+button {
+    border: $border;
+    border-radius: $radius;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    padding: 20px;
+    margin: 25px;
+    width: 50%;
+    
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: background-color .5s;
+    }
+
+    #arrow-icon {
+        color: $specialText;
+    }
+}

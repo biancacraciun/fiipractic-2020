@@ -1,16 +1,17 @@
 $medium: 1.5rem;
 $small: 1rem;
 $specialText: #BE3144;
-$medium_width: 10vmax;
+$medium_width: 15vmax;
 $border: 2px solid $specialText;
 $radius: 5px;
 
 .popular_users {
+  margin-top: 20vh;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: center;
-  margin-top: 10vmax;
 
   label {
     font-size: $medium;
@@ -19,9 +20,13 @@ $radius: 5px;
 
   .selected_language {
     display: flex;
-    margin: $small;
+    text-align: center;
+    margin: 20px;
 
     .options {
+      width: $medium_width;
+      margin: 0px 10px;
+      padding: 10px;
       outline: none;
       border: none;
       border-bottom: $border;
@@ -29,10 +34,7 @@ $radius: 5px;
       background-color: rgba(0, 0, 0, 0);
       color: $specialText;
       font-size: $small;
-      padding: 0.5rem;
       cursor: pointer;
-      width: $medium_width;
-      margin: 0px $small;
 
       &:hover {
           border-bottom: 2px solid #F00D1E;
@@ -42,6 +44,8 @@ $radius: 5px;
 
     button {
       width: $medium_width;
+      padding: 10px;
+      margin: 0px 10px;
       background-color: #2a2025;
       border: none;
       border-bottom: $border;
@@ -53,8 +57,8 @@ $radius: 5px;
       text-align: center;
 
       &:hover {
-          border-bottom: 2px solid #F00D1E;
-          transition: border-bottom 0.5s;
+        border-bottom: 2px solid #F00D1E;
+        transition: border-bottom 0.5s;
       }
     }
   }
@@ -98,10 +102,60 @@ $radius: 5px;
     }
   }
 
-  .users {
+  .show-users {
     display: flex;
-    flex-direction: row; 
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column; 
+
+    .users {
+      display: flex;
+      flex-direction: row; 
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0
+      }
+      to { 
+        opacity: 1
+      }
+    }
+
+    .load-more {
+      display: flex;
+      justify-content: center;
+      margin: 25px;
+
+      #loading {
+        outline: none;
+        padding: 20px;
+        margin: 25px;
+        border: $border;
+        border-radius: $radius;
+        background-color: transparent;
+        width: 50%;
+        color: white;
+        cursor: pointer;
+        font-size: 1rem;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.5);
+          transition: background-color .5s;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 667px) {
+  .popular_users {
+    label {
+      font-size: 1rem;
+    }
   }
 }

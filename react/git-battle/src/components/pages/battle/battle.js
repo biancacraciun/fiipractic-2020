@@ -8,8 +8,8 @@ import '../../../styling/battle/battle.scss';
 import '../../../styling/battle/modal.scss';
 
 import Users from './usersBattle';
-import AboutBattle from './aboutBattle';
 import Backdrop from '../../UI/backdrop/backdrop';
+import StartBattle from './startBattle';
 
 class UsersBattle extends Component {
     constructor(props) {
@@ -24,6 +24,10 @@ class UsersBattle extends Component {
             show: false,
             errorMessage: "",
         }
+    }
+
+    componentDidMount() {
+        fetchUsers();
     }
 
     handleClick = (e) => {
@@ -84,8 +88,8 @@ class UsersBattle extends Component {
     };
 
     showUser = () => {
-
         let users = [this.state.username1.user1, this.state.username2.user2];
+
         return users.map((user, index) => {
             return (
                 <Users 
@@ -111,69 +115,37 @@ class UsersBattle extends Component {
     eraseError = () => {
         this.setState({
             errorMessage: "",
-            visibility: !this.state.visibility
         })
         return;
     };
 
-    closeModal = () => {
+    backdropClick = () => {
         this.setState({
             isSubmitted: false,
             show: false
         })
     };
 
-    backdropClick = () => {
-        this.setState({
-            isSubmitted: false
-        })
-    }
 
     render() {
+        let backdrop = null;
+        
+        if(this.state.show) {
+            backdrop = <Backdrop clicked={this.backdropClick}/>
+        }
 
         return (
             <main className="battle">
+                {backdrop}
                 {(this.state.isSubmitted) ? 
                     <div className="modal"> 
-                        <Backdrop show={this.state.show} clicked={this.backdropClick}/>
                         {this.showUser()} 
                     </div> : 
-
-                    <div className="start">
-                        <div>{this.state.errorMessage}</div> 
-
-                        <form className="form">
-                            <div className="inputs">
-                                <input 
-                                    onKeyDown={this.eraseError}
-                                    id="firstUserName"
-                                    className="input_user"
-                                    type="text"
-                                    placeholder="Enter username">                       
-                                </input>
-
-                                <span>vs</span>
-
-                                <input 
-                                    onKeyDown={this.eraseError}
-                                    id="secondUserName"
-                                    className="input_user"
-                                    type="text"
-                                    placeholder="Enter username">
-                                </input>
-                            </div>
-                            
-                            <div className="button">
-                                <button
-                                    onClick={this.handleClick}
-                                    onMouseEnter={this.hiddenCriteria}
-                                    onMouseLeave={this.seeCriteria}
-                                    type="submit" 
-                                >Battle</button>
-                            </div>
-                        </form>
-                        <AboutBattle />
-                    </div>  
+                    <StartBattle 
+                        errorMessage={this.state.errorMessage}
+                        eraseError={this.eraseError}
+                        handleClick={this.handleClick}
+                    />
                 }
             </main>
         )

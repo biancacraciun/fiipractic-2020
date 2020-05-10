@@ -6,11 +6,11 @@ $font: 'Raleway Dots', cursive;
 $specialText: #BE3144;
 
 .about {
+    margin-top: 20vh;
     display: flex;
     flex-direction: column; 
     align-items: center;
     align-content: center;
-    margin-top: 10vmax;
 
     .intro {
         font-size: $medium;
@@ -42,3 +42,4 @@ $specialText: #BE3144;
         }
     }
 }
+

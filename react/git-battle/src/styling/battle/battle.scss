@@ -4,7 +4,7 @@ $radius: 5px;
 $basicBorder: 1px solid $specialText;
 
 .start {
-    margin-top: 10vmax;
+    margin-top: 20vh;
     display: flex;
     flex-direction: column; 
     align-items: center;
@@ -64,24 +64,22 @@ $basicBorder: 1px solid $specialText;
             align-content: center;
 
             input {
-                margin: 3rem;
+                width: 15vmax;
+                margin: 30px;
                 text-align: center;
                 font-size: $medium;
                 background-color: rgba(0, 0, 0, 0);
                 border: none;
                 border-radius: $radius;
-                width: 10vmax;
-                transition: width 0.4s ease;
                 border-bottom: 2px solid #2a2025;
                 color: white;
                 transition: all 1s;
 
                 &:focus {
-                    max-width: 100%;
-                    width: 20vmax;
+                    width: 25vmax;
                     outline: none;
                     border: 2px solid $specialText;
-                    transition: width 1s ease-in-out;
+                    transition: width 1s;
                 }
 
                 &::placeholder {
@@ -116,13 +114,13 @@ $basicBorder: 1px solid $specialText;
 }
 
 .weapons {
-    max-width: 30vmax;
+    max-width: 60vh;
     line-height: 2;
     border-top: $basicBorder;
     border-bottom: $basicBorder;
     border-radius: 15%;
-    padding: 1rem;
-    margin: 0.5rem;
+    padding: 20px;
+    margin: 20px;
 
     label {
         font-size: $medium;
@@ -133,5 +131,27 @@ $basicBorder: 1px solid $specialText;
     span {
         font-weight: bold;
         color: $specialText;
+    }
+}
+
+// 
+
+@media (max-width: 667px) {
+    .start {
+        .form {
+            input::placeholder {
+                font-size: 1rem;
+            }
+
+            .button {
+                button {
+                    font-size: 1rem;   
+                }
+            }
+        }
+    }
+
+    .weapons {
+        max-width: 50vh;
     }
 }

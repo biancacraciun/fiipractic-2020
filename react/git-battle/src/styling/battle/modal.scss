@@ -2,7 +2,7 @@ $specialText: #BE3144;
 
 .modal {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: row;
     align-items: flex-start;
     align-content: center;
@@ -11,11 +11,35 @@ $specialText: #BE3144;
     box-shadow: 10px 10px 30px $specialText;
     position: relative;
     margin: 20vmin;
-    z-index: 1;
+    z-index: 200;
     animation: fadein 0.5s;
 }
 
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+@media (max-width: 480px) {
+    .modal {
+        margin: 45px;
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 481px) {
+    .modal {
+        margin: 45px;
+        align-content: center;
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 813px) {
+    .modal {
+        justify-content: space-around;
+        margin: 70px;
+    }
 }

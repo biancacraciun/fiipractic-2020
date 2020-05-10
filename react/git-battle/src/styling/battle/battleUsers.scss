@@ -3,15 +3,16 @@ $small: 1.5rem;
 $space: 5px;
 $specialText: #BE3144;
 $border: 1px solid $specialText;
+$percent: 10%;
 
 .show_user {
-  max-width: 30vmax;
+  max-width: 40vmax;
   width: 25vmax;
-  margin: 10vmin;
+  margin: 30px;
   box-sizing: border-box;
   border-bottom: $border;
   border-top: $border;
-  border-radius: 10%;
+  border-radius: $percent;
 
   header {
     h2 {
@@ -19,7 +20,7 @@ $border: 1px solid $specialText;
     }
   }
 
-  .users{
+  .users {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,9 +28,10 @@ $border: 1px solid $specialText;
     .avatar {
       a {
         img { 
-          max-width: 50vmin;
-          border-radius: 5px;
+          max-width: 40vmax;
+          border-radius: $percent;
           text-align: center;
+          padding: 10px;
         }
 
         &:hover {
@@ -50,7 +52,6 @@ $border: 1px solid $specialText;
     }
 
     .profile_info {
-
       ul {
         li {
           list-style-type: none;
@@ -62,6 +63,7 @@ $border: 1px solid $specialText;
           }
         }
       }
+
       .span {
         font-weight: bold;
         margin: 0 $space;
@@ -80,6 +82,81 @@ $border: 1px solid $specialText;
 
       .icon {
         margin-right: $space;
+      }
+    }
+  }
+}
+
+@media (max-width: 568px) {
+  .show_user {
+    padding: $space;
+
+    header {
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .users {
+      .avatar {
+        a {
+          img {
+            width: 20vmax;
+          }
+        }
+      }
+  
+      .name {
+        font-size: 1rem;
+      }
+
+      .profile_info {
+        ul {
+          li {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 569px)  {
+  .show_user {
+    max-width: 50vmax;
+    width: 50vmax;
+
+    .users {
+      .avatar {
+        a {
+          img {
+            max-width: 25vmax;
+          }
+        }
+      }
+
+      .profile_info {
+        ul {
+          li {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 813px) {
+  .show_user {
+    width: 30vmax;
+
+    .users {
+      .avatar {
+        a {
+          img {
+            width: 30vmax;
+          }
+        }
       }
     }
   }

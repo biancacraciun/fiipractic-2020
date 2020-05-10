@@ -1,8 +1,8 @@
 import React from 'react';
-import '../../../styling/backdrop.scss';
+import '../../../styling/UI/backdrop.scss';
 
 const backdrop = (props) => {
-    return props.show ? <div className="backdrop" onClick={props.clicked}></div> : null;
+    return <div className="backdrop" onClick={props.clicked}></div> 
 };
 
 export default backdrop;
