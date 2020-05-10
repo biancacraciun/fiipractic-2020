@@ -9,12 +9,12 @@ import {
 import '../../styling/layout.scss';
 
 import Header from '../header/header';
-import About from '../pages/about/about';
 import Battle from '../pages/battle/battle';
 import DrawerToggleButton from '../UI/drawerToggleButton/drawerToggleButton';
 import Backdrop from '../UI/backdrop/backdrop';
 import SideDrawer from '../UI/sideDrawer/sideDrawer';
 import Trending from '../pages/trending/popularUsers';
+import About from '../pages/aboutPage/about';
 
 class Navigation extends Component {
     state = {
