@@ -21,13 +21,14 @@ class Navigation extends Component {
         show: false
     }
 
-    componentDidUpdate(prevProps) {
+    /* componentDidUpdate(prevProps) {
+        console.log(prevProps)
         if(this.props.location !== prevProps.location && this.state.show) {
             this.setState({
                 show: false
             })
         }
-    }
+    } */
 
     drawerToggleHandler = () => {
         this.setState((prevState) => {

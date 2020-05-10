@@ -16,15 +16,15 @@ class SideDrawer extends Component {
             <div className={drawerClasses}>
                 <Link 
                     className="navigation-link"
-                    to={(location) => ({...location, pathname: "/"})}
+                    to="/"
                 >About</Link>
                 <Link 
                     className="navigation-link"
-                    to={(location) => ({...location, pathname: "/popular_users"})}
+                    to="/popular_users"
                 >Trending</Link>
                 <Link 
                     className="navigation-link"
-                    to={(location) => ({...location, pathname: "/battle"})}
+                    to="/battle"
                 >Battle</Link>
             </div>
         )
