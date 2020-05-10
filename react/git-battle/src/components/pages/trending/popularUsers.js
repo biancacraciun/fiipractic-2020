@@ -67,7 +67,7 @@ class Trending extends Component {
                 <div>{this.state.error}</div>
 
                 <label htmlFor="language">
-                    Choose programming language. <br/>
+                    Choose a programming language. <br/>
                     See trending projects and developers.
                 </label>
 
